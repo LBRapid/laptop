@@ -28,9 +28,6 @@ fancy_echo "Installing Postgres, a good open source relational database ..."
   successfully brew install postgres --no-python
   successfully initdb /usr/local/var/postgres -E utf8
 
-fancy_echo "Installing Redis, a good key-value database ..."
-  successfully brew install redis
-
 fancy_echo "Installing The Silver Searcher (better than ack or grep) to search the contents of files ..."
   successfully brew install the_silver_searcher
 
@@ -45,12 +42,6 @@ fancy_echo "Installing reattach-to-user-namespace, for copy-paste and RubyMotion
 
 fancy_echo "Installing ImageMagick, to crop and resize images ..."
   successfully brew install imagemagick
-
-fancy_echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
-  successfully brew install qt
-
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
-  successfully brew install watch
 
 fancy_echo "Installing rbenv, to change Ruby versions ..."
   successfully brew install rbenv
@@ -95,6 +86,23 @@ fancy_echo "Installing Heroku CLI client ..."
 
 fancy_echo "Installing the heroku-config plugin to pull config variables locally to be used as ENV variables ..."
   successfully heroku plugins:install git://github.com/ddollar/heroku-config.git
+
+fancy_echo "Installing autojump ..."
+  successfully brew install autojump
+
+fancy_echo "Installing macvim ..."
+  successfully rbenv shell system
+  successfully brew install macvim
+
+fancy_echo "Installing vim ..."
+  successfully rbenv shell system
+  successfully brew install vim
+
+fancy_echo "Installing sqlite ..."
+  successfully brew install sqlite
+
+fancy_echo "Installing git ..."
+  successfully brew install git
 
 if ! grep -qs "DO NOT EDIT BELOW THIS LINE" ~/.zshrc; then
   fancy_echo "Prepare ~/.zshrc for http://github.com/thoughtbot/dotfiles ..."
